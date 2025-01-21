@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>主頁</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        
+        <!-- 顯示使用者資訊 -->
+        <div class="user-info">
+            <p>歡迎回來, <span th:text="${member.realname}">使用者</span>！</p>
+        </div>
+
+        <!-- 功能選單 -->
+        <div class="menu">
+            <a th:href="@{/chat}" class="btn">進入聊天室</a>
+            
+            
+            <button onclick="window.location.href='/logout';" class="btn">登出</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
